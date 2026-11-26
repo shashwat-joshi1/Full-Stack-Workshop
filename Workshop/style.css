@@ -1,0 +1,346 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+/* HEADER */
+
+header {
+    background-color: #163b65;
+    color: white;
+    padding: 20px 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /*gap: 150px;
+    yesle kei gareko xaina uncomment garda ni same output.*/
+}
+
+.logo h1 {
+    font-size: 28px;
+}
+
+.logo p {
+    font-size: 13px;
+    color: #d6e4f0;
+}
+
+
+/* NAVIGATION */
+
+nav ul {
+    list-style: none;
+
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #64d6b0;
+}
+
+
+/* MAIN CONTENT */
+
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+/* WELCOME SECTION */
+
+.welcome {
+    background-color: #dceeff;
+    text-align: center;
+    padding: 60px 20px;
+    margin: 30px 0;
+    border-radius: 12px;
+}
+
+.welcome h2 {
+    font-size: 32px;
+    color: #163b65;
+    margin-bottom: 15px;
+}
+
+.welcome p {
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #163b65;
+    color: white;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+}
+
+.btn:hover {
+    background-color: #245b91;
+}
+
+
+/* SECTION HEADINGS */
+
+section h2 {
+    color: #163b65;
+    margin-bottom: 20px;
+}
+
+
+/* COURSE SECTION */
+
+#courses {
+    margin: 40px 0;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.course-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.course-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.course-card h3 {
+    margin: 12px 0 5px;
+    color: #163b65;
+}
+
+.course-card p {
+    margin-bottom: 10px;
+}
+
+.course-card a {
+    color: #087e8b;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.course-card a:hover {
+    text-decoration: underline;
+}
+
+figcaption {
+    font-size: 13px;
+    color: #666;
+}
+
+
+/* RESOURCES SECTION */
+
+#resources {
+    margin: 5px 0;
+}
+
+.resource-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #087e8b;
+}
+
+.resource-card h3 {
+    color: #163b65;
+    margin-bottom: 10px;
+}
+
+.resource-card ul {
+    padding-left: 20px;
+}
+
+.resource-card a {
+    color: #087e8b;
+    text-decoration: none;
+}
+
+
+/* MEDIA SECTION */
+
+#media {
+    margin: 50px 0;
+}
+
+.media-container {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.media-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.media-card h3 {
+    color: #163b65;
+    margin-bottom: 10px;
+}
+
+.media-card p {
+    margin-bottom: 15px;
+}
+
+.media-card video {
+    border-radius: 8px;
+}
+
+.media-card audio {
+    width: 100%;
+}
+
+
+/* ABOUT AND SIDEBAR */
+
+.content-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.about,
+.sidebar {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.about h3,
+.sidebar h3 {
+    color: #163b65;
+    margin: 15px 0 8px;
+}
+
+.about ul,
+.sidebar ul {
+    padding-left: 20px;
+}
+
+.sidebar {
+    background-color: #e5f2fa;
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #163b65;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+
+/* TABLET RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        justify-content: center;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .welcome h2 {
+        font-size: 25px;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    .resource-container,
+    .media-container {
+        flex-direction: column;
+    }
+
+    .resource-card,
+    .media-card {
+        width: 100%;
+    }
+
+    main {
+        width: 92%;
+    }
+
+}
